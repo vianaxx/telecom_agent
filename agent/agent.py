@@ -55,7 +55,7 @@ class TelecomAgent:
 
         messages = [
             {"role": "system",
-             "content": "Você é um assistente técnic experiente. Responda de forma curta, clara, humana e passo a passo."},
+             "content": "Você é um assistente técnico experiente. Responda de forma curta, clara, humana e passo a passo."},
             {"role": "system", "content": f"Contexto relevante (use se útil):\n{context}"},
             *self.memory.get(),
             {"role": "user", "content": text}
