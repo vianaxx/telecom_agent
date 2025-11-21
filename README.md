@@ -51,7 +51,7 @@ agent/
 ├─ tools/
 │  └─ router_api.py   # Simula status de dispositivos
 rag/
-├─ kb_data.py         # Base de conhecimento FTTH
+├─ kb_data.py         # Base de conhecimento
 ├─ vector_store.py    # Armazena e busca documentos via ChromaDB
 run.py                # CLI
 api/
