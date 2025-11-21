@@ -82,7 +82,7 @@ Dispositivo ONT12345 status: ok, latência 45ms, packet loss 3%
 * Abra o app:
 
 ```bash
-streamlit run api/main.py
+streamlit run app.py
 ```
 
 * Interação:
