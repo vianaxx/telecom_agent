@@ -115,28 +115,11 @@ streamlit run app.py
 
 ---
 
-## 🔹 Como funciona internamente
-
-1. **RAG + LLM**
-
-    * Busca na KB (via ChromaDB) os procedimentos oficiais TELECOM mais relevantes.
-    * Envia contexto + histórico de chat para LLM gerar resposta passo a passo.
-
-2. **Memória**
-
-    * Armazena até 20 mensagens (usuário + agente).
-
-3. **Device API**
-
-    * Simula ou consulta status dinâmico de BBU, RRU e antenas (`ok`, `degraded`, `critical`) com SNR, tráfego e logs.
-
-4. **Cache simples**
-
-    * Respostas anteriores são guardadas para agilizar consultas repetidas.
-
----
-
 ## 🔹 Demonstração
+
+https://github.com/user-attachments/assets/1a4689c5-6d5b-4c1e-97f4-4b0ecfccfb6d
+
+
 
 
 
