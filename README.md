@@ -140,6 +140,9 @@ streamlit run app.py
 
 ## 🔹 Demonstração
 
+https://github.com/user-attachments/assets/eec53ce6-362a-4b62-9b89-fbabb18132c7
+
+
 
 
 ---
