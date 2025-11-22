@@ -1,0 +1,14 @@
+2025-11-22 15:49:54,554 | INFO | TelecomAgent | User input: Como reiniciar a RRU do site ABC123?
+2025-11-22 15:49:54,554 | INFO | TelecomAgent | Cache hit
+2025-11-22 15:50:12,540 | INFO | chromadb.telemetry.product.posthog | Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2025-11-22 15:50:16,367 | INFO | TelecomAgent | TelecomAgent initialized with model: gpt-oss:120b
+2025-11-22 15:50:19,259 | INFO | TelecomAgent | User input: Como reiniciar a RRU do site ABC123?
+2025-11-22 15:50:20,474 | INFO | httpx | HTTP Request: POST https://ollama.com/api/chat "HTTP/1.1 200 OK"
+2025-11-22 15:50:41,169 | INFO | TelecomAgent | Response: **Reinício da RRU – Site\u202fABC123**  
+
+> **Aviso:** O comando de reinício de equipamento\u202f5G afeta a cobertura da célula. S...
+2025-11-22 15:50:49,464 | INFO | TelecomAgent | User input: 3
+2025-11-22 15:50:55,197 | INFO | httpx | HTTP Request: POST https://ollama.com/api/chat "HTTP/1.1 200 OK"
+2025-11-22 15:51:03,265 | INFO | TelecomAgent | Response: Entendo que você respondeu “3”, mas preciso confirmar a que opção você se refere para prosseguirmos com segurança.
+
+**Pe...
