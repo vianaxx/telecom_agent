@@ -1,5 +1,5 @@
 from agent.agent import TelecomAgent
-from agent.tools.router_api import get_device_status
+from agent.tools.device_api import get_device_status
 
 agent = TelecomAgent()
 
