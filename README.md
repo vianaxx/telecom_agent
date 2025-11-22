@@ -76,9 +76,6 @@ Digite sua dúvida técnica ou 'status <DEVICE_ID>'
 
 User > Como reiniciar a RRU do site ABC123?
 Agent >
-1. Verifique alarmes ativos na RRU ABC123
-2. Execute reboot remoto via console BBU
-3. Monitore logs e SNR após reinício
 
 User > status BBU12345
 Dispositivo BBU12345 status: ok, SNR 35 dB, tráfego 450 Mbps, sem alarmes críticos
@@ -120,6 +117,8 @@ streamlit run app.py
 https://github.com/user-attachments/assets/1a4689c5-6d5b-4c1e-97f4-4b0ecfccfb6d
 
 
+
+https://github.com/user-attachments/assets/35e87569-c5a9-472e-94d2-c6de6dc17fe1
 
 
 
