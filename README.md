@@ -1,32 +1,28 @@
-
 # Telecom Field Assistant – Rede 5G
 
-Assistente técnico para redes 5G, integrado com base de conhecimento (KB), LLM (Ollama) e monitoramento de equipamentos de rádio (BBU, RRU, antenas e backhaul).
-Fornece respostas passo a passo, claras e curtas, e permite consultas em tempo real a dispositivos críticos da rede 5G.
-
-https://telecomagent-qjj4eptbzadzmmm4mkwb7q.streamlit.app/
+Assistente técnico para redes 5G, integrado com base de conhecimento (KB), LLM (Ollama) e monitoramento de equipamentos de rádio (BBU, RRU, antenas e backhaul). Fornece respostas passo a passo, claras e curtas, e permite consultas em tempo real a dispositivos críticos da rede 5G.
 
 ---
 
 ## 🔹 Funcionalidades
 
-1. **Consultas técnicas com contexto (RAG)**
+### Consultas técnicas com contexto (RAG)
 
-    * Busca na base de conhecimento relevante antes de gerar a resposta (procedimentos de Telecom, boas práticas 5G).
-    * Mantém histórico de conversa para contexto contínuo.
+* Busca na base de conhecimento relevante antes de gerar a resposta (procedimentos de Telecom, boas práticas 5G).
+* Mantém histórico de conversa para contexto contínuo.
 
-2. **Monitoramento de dispositivos**
+### Monitoramento de dispositivos
 
-    * Comando `status <DEVICE_ID>` para obter status de equipamentos (BBU/RRU), alarmes, SNR, potência de sinal, tráfego e logs.
+* Comando `status <DEVICE_ID>` para obter status de equipamentos (BBU/RRU), alarmes, SNR, potência de sinal, tráfego e logs.
 
-3. **Histórico de chat**
+### Histórico de chat
 
-    * Memória limitada às últimas 20 interações.
+* Memória limitada às últimas 20 interações.
 
-4. **Interface CLI e Web (Streamlit)**
+### Interface CLI e Web (Streamlit)
 
-    * CLI para técnicos em campo.
-    * Web para visualização de contexto, logs e respostas detalhadas.
+* CLI para técnicos em campo.
+* Web para visualização de contexto, logs e respostas detalhadas.
 
 ---
 
@@ -34,17 +30,28 @@ https://telecomagent-qjj4eptbzadzmmm4mkwb7q.streamlit.app/
 
 * Python 3.10+
 
-* `.env` com variável:
-
-```bash
-OLLAMA_API_KEY=your_api_key_here
-```
-
 * Dependências:
 
 ```bash
 pip install chromadb ollama streamlit python-dotenv
 ```
+
+---
+
+## 🔹 Gerando a API Key da Ollama
+
+Para usar o app pelo Streamlit, cada usuário precisa gerar sua própria API Key da Ollama:
+
+1. Acesse o site da [Ollama](https://ollama.com) e **crie uma conta** ou faça login.
+2. No painel da conta, vá até **API / API Keys** (ou seção equivalente).
+3. Clique em **“Generate API Key”** ou “Create New Key”.
+4. Copie a chave gerada e guarde em local seguro.
+5. Abra o app Streamlit em:
+   [https://telecomagent-qjj4eptbzadzmmm4mkwb7q.streamlit.app/](https://telecomagent-qjj4eptbzadzmmm4mkwb7q.streamlit.app/)
+6. No **menu lateral (sidebar)** do app, cole sua API Key no campo “Ollama API Key” (tipo password).
+7. A partir daí, você poderá digitar comandos e interagir com o agente normalmente.
+
+> ⚠️ **Importante:** nunca compartilhe sua API Key publicamente. Ela funciona como uma senha.
 
 ---
 
@@ -101,7 +108,6 @@ streamlit run app.py
    ```
    Como otimizar tráfego de backhaul no site XYZ?
    ```
-
 2. Comando de status:
 
    ```
@@ -110,8 +116,8 @@ streamlit run app.py
 
 * O histórico do chat exibe:
 
-    * Pergunta do usuário
-    * Resposta detalhada do agente, incluindo SNR, alarmes e tráfego
+  * Pergunta do usuário
+  * Resposta detalhada do agente, incluindo SNR, alarmes e tráfego
 
 * Limpar conversa: clique no botão **🧹 Limpar Conversa**.
 
@@ -119,31 +125,28 @@ streamlit run app.py
 
 ## 🔹 Como funciona internamente
 
-1. **RAG + LLM**
+### RAG + LLM
 
-    * Busca na KB (via ChromaDB) os procedimentos oficiais TELECOM mais relevantes.
-    * Envia contexto + histórico de chat para LLM gerar resposta passo a passo.
+* Busca na KB (via ChromaDB) os procedimentos oficiais TELECOM mais relevantes.
+* Envia contexto + histórico de chat para LLM gerar resposta passo a passo.
 
-2. **Memória**
+### Memória
 
-    * Armazena até 20 mensagens (usuário + agente).
+* Armazena até 20 mensagens (usuário + agente).
 
-3. **Device API**
+### Device API
 
-    * Simula ou consulta status dinâmico de BBU, RRU e antenas (`ok`, `degraded`, `critical`) com SNR, tráfego e logs.
+* Simula ou consulta status dinâmico de BBU, RRU e antenas (`ok`, `degraded`, `critical`) com SNR, tráfego e logs.
 
-4. **Cache simples**
+### Cache simples
 
-    * Respostas anteriores são guardadas para agilizar consultas repetidas.
+* Respostas anteriores são guardadas para agilizar consultas repetidas.
 
 ---
 
 ## 🔹 Demonstração
 
-https://github.com/user-attachments/assets/eec53ce6-362a-4b62-9b89-fbabb18132c7
 
+https://github.com/user-attachments/assets/5541d25d-2f58-4d3f-a10f-55a8e8430819
 
-
-
----
 
