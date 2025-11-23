@@ -12,7 +12,7 @@ with st.sidebar:
     st.header("🔑 Autenticação Ollama")
     ollama_api_key = st.text_input("Enter your Ollama API Key", type="password")
     if not ollama_api_key:
-        st.warning("Please enter your Ollama API key to use the chatbot.")
+        st.warning("Please enter your Ollama API key to use the AI Agent.")
 
 # Bloqueia o uso do app se não houver chave
 if not ollama_api_key:
