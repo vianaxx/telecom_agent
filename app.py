@@ -4,10 +4,10 @@ from agent.agent import TelecomAgent
 from agent.tools.device_api import get_device_status
 import pandas as pd
 
-# Configuração da página
+
 st.set_page_config(page_title="Telecom Field Assistant", page_icon="📡", layout="centered")
 
-# -------------------- SIDEBAR DE AUTENTICAÇÃO --------------------
+
 with st.sidebar:
     st.header("🔑 Autenticação Ollama")
     ollama_api_key = st.text_input("Enter your Ollama API Key", type="password")
@@ -18,13 +18,13 @@ with st.sidebar:
 if not ollama_api_key:
     st.stop()
 
-# Define a variável de ambiente antes de criar o agente
+
 os.environ["OLLAMA_API_KEY"] = ollama_api_key
 
-# -------------------- AGENTE --------------------
-agent = TelecomAgent()  # agora vai pegar a chave do ambiente
 
-# -------------------- HISTÓRICO DE CHAT --------------------
+agent = TelecomAgent()  
+
+
 if "chat" not in st.session_state:
     st.session_state.chat = []
 
@@ -57,7 +57,7 @@ def display_chat():
                     else:
                         st.info(log)
 
-# -------------------- TÍTULO E INPUT --------------------
+
 st.title("📡 Telecom Field Assistant")
 st.write("Assistente para técnicos de instalação e manutenção de redes 5G.")
 st.divider()
