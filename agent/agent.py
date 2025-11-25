@@ -1,4 +1,3 @@
-# agent/agent.py
 import os
 import logging
 from dotenv import load_dotenv
@@ -7,10 +6,9 @@ from agent.memory import Memory
 from rag.kb_data import KB_DOCS
 from rag.vector_store import VectorStore
 
-# Carrega .env
+
 load_dotenv()
 
-# Logging
 os.makedirs("logs", exist_ok=True)
 logging.basicConfig(
     filename="logs/agent.log",
@@ -34,11 +32,11 @@ class TelecomAgent:
         self.memory = Memory()
         self.vector = VectorStore()
 
-        # Carrega KB
+        
         for text, meta in KB_DOCS:
             self.vector.add_document(text, meta)
 
-        # Cache simples
+        
         self.cache = {}
         logger.info(f"TelecomAgent initialized with model: {self.model}")
 
