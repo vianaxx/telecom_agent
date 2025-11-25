@@ -1,6 +1,7 @@
 # Telecom Field Assistant – Rede 5G
 
-**Status:** Em Desenvolvimento 🚧
+**Status:** Em desenvolvimento 🚧
+**Refatoração:** Migrando para LangChain 🚧
 
 Assistente técnico para redes 5G, integrado com base de conhecimento (KB), LLM (Ollama) e monitoramento de equipamentos de rádio (BBU, RRU, antenas e backhaul). Fornece respostas passo a passo, claras e curtas, e permite consultas em tempo real a dispositivos críticos da rede 5G.
 
