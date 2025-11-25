@@ -20,5 +20,5 @@ class VectorStore:
         """Retorna lista de documentos mais relevantes."""
         result = self.collection.query(query_texts=[query], n_results=top_k)
         if result and "documents" in result and result["documents"]:
-            return result["documents"][0]  # lista de strings
+            return result["documents"][0] 
         return []
