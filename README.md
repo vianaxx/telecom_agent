@@ -1,9 +1,11 @@
+# 📡 Telecom Field Assistant – Rede 5G
 
-# Telecom Field Assistant – Rede 5G
+> Assistente técnico inteligente para redes 5G, integrado com RAG (Retrieval-Augmented Generation), LLM (Ollama) e telemetria de equipamentos.
 
-Assistente técnico para redes 5G, integrado com base de conhecimento (KB), LLM (Ollama) e monitoramento de equipamentos de rádio (BBU, RRU, antenas e backhaul).
-Fornece respostas passo a passo, claras e curtas, e permite consultas em tempo real a dispositivos críticos da rede 5G.
+O sistema fornece diagnósticos passo a passo e permite consultas em tempo real a dispositivos críticos da rede (BBU, RRU, Antenas). O projeto inclui uma interface Web (Streamlit) e uma CLI para técnicos em campo.
 
+**Demo Online:** [Acessar App](https://telecomagent.streamlit.app/)
+*(Nota: Para a versão online funcionar, é necessária uma API Key de uma instância Ollama acessível publicamente.*
 ---
 
 ## 🔹 Funcionalidades
@@ -115,3 +117,23 @@ streamlit run app.py
 
 ---
 
+## 🔹 Como funciona internamente
+
+1. **RAG + LLM**
+
+    * Busca na KB (via ChromaDB) os procedimentos oficiais TELECOM mais relevantes.
+    * Envia contexto + histórico de chat para LLM gerar resposta passo a passo.
+
+2. **Memória**
+
+    * Armazena até 20 mensagens (usuário + agente).
+
+3. **Device API**
+
+    * Simula ou consulta status dinâmico de BBU, RRU e antenas (`ok`, `degraded`, `critical`) com SNR, tráfego e logs.
+
+4. **Cache simples**
+
+    * Respostas anteriores são guardadas para agilizar consultas repetidas.
+
+---
